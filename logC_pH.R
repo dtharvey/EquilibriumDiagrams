@@ -41,6 +41,8 @@ logC_pH = function(pka_list = c(3.128, 4.761, 6.396),
             xlab = "pH", ylab = "pC")
     lines(logc$pH, logc$pH, lwd = 2, lty = 2, col = "green4")
     lines(logc$pH, logc$pOH, lwd = 2, lty = 2, col = "firebrick4")
+    text(0, 13.5, pos = 3, offset = 0.1, expression("OH"^"-"), col = "firebrick4")
+    text(14, 13.5, pos = 3, offset = 0.1, expression("H"^"+"), col = "green4")
     abline(h = -log10(conc_total), col = "black", lwd = 1)
   }
   if (is.null(species) == FALSE) {
@@ -63,13 +65,15 @@ logC_pH = function(pka_list = c(3.128, 4.761, 6.396),
            col = c(rep("blue", 6), rep("red", 6)), lwd = 2,
            bty = "n", horiz = TRUE)
   }
-  text(0, 13.5, pos = 3, offset = 0.1, expression("OH"^"-"), col = "firebrick4")
-  text(14, 13.5, pos = 3, offset = 0.1, expression("H"^"+"), col = "green4")
+
+# return data: data frame containing pH, pOH, and alpha values  
+  
   invisible(logc)
+  
 }
 
 # sample code to show output
 
-# source('~/Box Sync/Sabbatical 2015-16/R-Project/EquilibriumDiagrams_SB/alpha_pH.R')
-# x = logC_pH(species = "citric acid")
-# head(x)
+source('~/Box Sync/Sabbatical 2015-16/R-Project/EquilibriumDiagrams/alpha_pH.R')
+x = logC_pH(species = "citric acid")
+head(x)
