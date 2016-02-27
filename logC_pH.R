@@ -74,6 +74,6 @@ logC_pH = function(pka_list = c(3.128, 4.761, 6.396),
 
 # sample code to show output
 
-source('~/Box Sync/Sabbatical 2015-16/R-Project/EquilibriumDiagrams/alpha_pH.R')
-x = logC_pH(species = "citric acid")
-head(x)
+# source('~/Box Sync/Sabbatical 2015-16/R-Project/EquilibriumDiagrams/alpha_pH.R')
+# x = logC_pH(species = "citric acid")
+# head(x)
