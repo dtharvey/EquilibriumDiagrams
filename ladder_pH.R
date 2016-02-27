@@ -7,7 +7,7 @@
 #       default, or "strip"
 # shade: choice of "color" or "gray" for shading of strip diagrams
 # buffer: logical; defaults to FALSE, but TRUE will add buffer regions
-# species: option to enter name of weak acid for main title of plot;
+# species: option to enter name of weak acid to add as title for plot;
 #          defaults to NULL, which supresses main title
 # labels: option to enter vector of labels for legend; defaults to
 #         NULL, which uses a default legend

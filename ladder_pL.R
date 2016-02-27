@@ -4,12 +4,13 @@
 # ligands: list giving number of ligands added for each pK value;
 #           defaults to vector of (1, 1, 1, 1) for the four stepwise
 #           cadmium-amine complexes
-# pL_axis: logical; defaults to FALSE but TRUE draws pL axis
+# pL_axis: logical; defaults to FALSE but TRUE draws pLigand axis
+# pL_limit: limits for pLigand axis; defaults to 0 to 14
 # type: the type of ladder diagram; options are "arrow," which is the
 #       default, or "strip"
 # buffer: logical; defaults to FALSE, but TRUE will add buffer regions
-# species: option to enter name of weak acid for main title of plot;
-#          defaults to NULL, which supresses main title
+# species: option to enter name of weak acid to add as title for plot;
+#          defaults to NULL, which supresses title
 # labels: option to enter vector of labels for legend; defaults to
 #         NULL, which uses a default legend
 # locate: x-axis location of arrow or center of strip; defaults to 2, 
@@ -128,15 +129,15 @@ ladder_pL = function(pk_list = c(2.55, 2.01, 1.34, 0.84),
 
 # code to test
 
-# ladder_pL(pL_axis = TRUE, type = "arrow", species = "cadmium-ammonia", 
+# ladder_pL(pL_axis = TRUE, type = "arrow", species = "cadmium-ammonia",
 #           locate = 2, pL_limit = c(0, 5))
 # ladder_pL(type = "arrow", locate = 5, overlay = TRUE,
-#           pk_list = c(6.87, 2.03), ligands = c(3, 1), 
+#           pk_list = c(6.87, 2.03), ligands = c(3, 1),
 #           species = "zinc-ammonia", pL_limit = c(0, 5))
 # ladder_pL(type = "strip", species = "cadmiium-ammonia", locate = 8,
 #           pL_limit = c(0, 5), shade = "color", overlay = TRUE)
-# ladder_pL(type = "strip", locate = 11, overlay = TRUE, 
-#           pL_limit = c(0, 5), pk_list = c(6.87, 2.03), ligands = c(3, 1), 
+# ladder_pL(type = "strip", locate = 11, overlay = TRUE,
+#           pL_limit = c(0, 5), pk_list = c(6.87, 2.03), ligands = c(3, 1),
 #           species = "zinc-ammonia", shade = "gray")
 
 
